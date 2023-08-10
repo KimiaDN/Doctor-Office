@@ -1,0 +1,16 @@
+D:\C#\DoctorOffice\DAL\bin\Debug\DAL.dll.config
+D:\C#\DoctorOffice\DAL\bin\Debug\DAL.dll
+D:\C#\DoctorOffice\DAL\bin\Debug\DAL.pdb
+D:\C#\DoctorOffice\DAL\bin\Debug\BE.dll
+D:\C#\DoctorOffice\DAL\bin\Debug\EntityFramework.dll
+D:\C#\DoctorOffice\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\C#\DoctorOffice\DAL\bin\Debug\BE.pdb
+D:\C#\DoctorOffice\DAL\bin\Debug\EntityFramework.xml
+D:\C#\DoctorOffice\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\C#\DoctorOffice\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\C#\DoctorOffice\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\C#\DoctorOffice\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\C#\DoctorOffice\DAL\obj\Debug\DAL.dll
+D:\C#\DoctorOffice\DAL\obj\Debug\DAL.pdb
+D:\C#\DoctorOffice\DAL\obj\Debug\DAL.Migrations.InitialCreate.resources
+D:\C#\DoctorOffice\DAL\obj\Debug\DAL.csproj.GenerateResource.cache

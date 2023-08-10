@@ -1,0 +1,6 @@
+D:\C#\DoctorOffice\BE\bin\Debug\BE.dll
+D:\C#\DoctorOffice\BE\bin\Debug\BE.pdb
+D:\C#\DoctorOffice\BE\obj\Debug\BE.csproj.AssemblyReference.cache
+D:\C#\DoctorOffice\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+D:\C#\DoctorOffice\BE\obj\Debug\BE.dll
+D:\C#\DoctorOffice\BE\obj\Debug\BE.pdb

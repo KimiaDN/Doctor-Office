@@ -1,0 +1,160 @@
+﻿<Window x:Class="DoctorOffice.MainWindow"
+        x:Name="MainW"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoctorOffice"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Title="MainWindow" Height="720" Width="1280">
+    <Border BorderBrush="#89023E">
+        <Grid x:Name="Main_Grid" Background="#89023E" Loaded="Grid_Loaded">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!--Header Menu-->
+            <Border BorderBrush="#F5F3F4" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="12" BorderThickness="10" CornerRadius="10" Margin="15,15,15,40">
+                <Rectangle Fill="#F5F3F4"/>
+            </Border>
+            <!--Right Menu-->
+            <Border BorderBrush="#48CAE4" Grid.Column="9" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="10" BorderThickness="15" CornerRadius="10" Margin="15,-25,15,15">
+                <Rectangle Fill="#48CAE4"/>
+            </Border>
+
+
+            <Border BorderBrush="#F5F3F4" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="3" BorderThickness="15" CornerRadius="10" Margin="15,-25,15,10">
+                <Rectangle Fill="#F5F3F4"/>
+            </Border>
+            <Border BorderBrush="#F5F3F4" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="3" BorderThickness="15" CornerRadius="10" Margin="5,-25,15,10">
+                <Rectangle Fill="#F5F3F4"/>
+            </Border>
+            <Border BorderBrush="#dee2e6" Grid.Column="6" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="3" BorderThickness="15" CornerRadius="10" Margin="5,-25,5,10">
+                <Rectangle Fill="#dee2e6"/>
+            </Border>
+            <Border BorderBrush="#dee2e6" Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="5" Grid.RowSpan="7" BorderThickness="15" CornerRadius="10" Margin="15,5,15,15">
+                <Rectangle Fill="#dee2e6"/>
+            </Border>
+            <Border BorderBrush="#F5F3F4" Grid.Column="6" Grid.ColumnSpan="3" Grid.Row="5" Grid.RowSpan="5" BorderThickness="15" CornerRadius="10" Margin="5,5,5,10">
+                <Rectangle Fill="#F5F3F4"/>
+            </Border>
+            <Border BorderBrush="#F5F3F4" Grid.Column="6" Grid.ColumnSpan="3" Grid.Row="10" Grid.RowSpan="10" BorderThickness="15" CornerRadius="10" Margin="5,5,5,15">
+                <Rectangle Fill="#F5F3F4"/>
+            </Border>
+
+            <!---Header menu icons-->
+            <Image Source="/Image/healthcare.png" Grid.Column="11" Grid.RowSpan="2" Height="60" Margin="0,-25,20,0"/>
+            <Image Source="/Image/shutdown.png"   Grid.Column="0" Grid.RowSpan="2" Height="40" Margin="20,-15,0,0" MouseLeftButtonDown="Shut_Dowm"/>
+
+
+            <!--Total Folders-->
+            <TextBlock Style="{StaticResource LM_BlackText}"   Grid.Column="6" Grid.Row="2" Grid.ColumnSpan="3" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-30,0,0" Text=" تعداد کل پرونده ها" />
+            <TextBlock x:Name="Patients_Num" Style="{StaticResource LM_BlackNumber}" Grid.Column="6" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="0,0,80,0" Text="30" />
+            <Image Grid.Column="7" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="2" Height="70" Margin="10,0,20,50" Source="/Image/folder.png" />
+            
+            <!---Today Total Patients-->
+            <TextBlock Style="{StaticResource LM_BlackText}"   Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="3" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-30,0,0" Text=" تعداد بیماران امروز" />
+            <TextBlock x:Name="Today_Patients" Style="{StaticResource LM_BlackNumber}" Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="0,-10,90,0" Text="10" />
+            <Image Grid.Column="4" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="2" Height="70" Margin="0,-60,40,20" Source="/Image/patients.png" />
+            <Image  />
+
+
+
+            <!--User Info Boder-->
+            <TextBlock x:Name="LogedInUser_Name"        Style="{StaticResource LM_BlackText}"  Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" FontSize="25" Margin="20,48,0,0"   FontWeight="Bold" Text="محمد صالحی" />
+            <TextBlock x:Name="LogedInUser_UserName"    Style="{StaticResource LM_BlackText}"  Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3" FontSize="20" Margin="0,40,40,0"   Text="نام کاربری" />
+            <TextBlock                                  Style="{StaticResource LM_BlackText}"  Grid.Column="0" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="3" FontSize="20" Margin="0,30,40,0"   Text="یادآور های امروز :" FlowDirection="RightToLeft" />
+            <TextBlock x:Name="LogedInUser_ReminderNum" Style="{StaticResource LM_BlackText}"  Grid.Column="0" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="2" FontSize="25" Margin="60,30,0,0" Text="10" HorizontalAlignment="Left" />
+            <Image Source="/Image/user.png" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Height="50" Margin="-40,20,-30,0" />
+
+
+            
+            
+
+           
+            
+
+
+
+            <!--Timer-->
+            <local:MainWindowClock Grid.Column="6" Grid.Row="10" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+
+            <!--Users Managment-->
+            <WrapPanel Grid.Column="9" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" Cursor="Hand" MouseLeftButtonDown="Users_Managment">
+                <TextBlock Style="{StaticResource LM_Text}" Text="مدریت کابران" Margin="65,10,5,0"/>
+                <Image Source="/Image/user_white.png" Margin="10,10,0,0" Height="50" />
+            </WrapPanel>
+            <!--Patients Managment-->
+            <WrapPanel Grid.Column="9" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="2" Cursor="Hand" MouseLeftButtonDown="Patients_Managment">
+                <TextBlock Style="{StaticResource LM_Text}" Text="مدریت بیماران" Margin="55,20,0,0"/>
+                <Image Source="/Image/patient.png" Margin="10,20,0,0" Height="50" />
+            </WrapPanel>
+            <!--Visiting Managment-->
+            <WrapPanel Grid.Column="9" Grid.Row="4" Grid.ColumnSpan="3" Grid.RowSpan="2" Cursor="Hand" MouseLeftButtonDown="Visiting_Managment">
+                <TextBlock Style="{StaticResource LM_Text}" Text="نوبت دهی" Margin="90,20,0,0"/>
+                <Image Source="/Image/doctor-visit.png" Margin="15,20,0,0" Height="60" />
+            </WrapPanel>
+            <!--Financial Managment-->
+            <WrapPanel Grid.Column="9" Grid.Row="5" Grid.ColumnSpan="3" Grid.RowSpan="2" Cursor="Hand" MouseLeftButtonDown="Financial">
+                <TextBlock Style="{StaticResource LM_Text}" Text="امور مالی" Margin="95,25,15,0"/>
+                <Image Source="/Image/financial.png" Margin="15,25,0,0" Height="55" />
+            </WrapPanel>
+            <!--Repoers Managment-->
+            <WrapPanel Grid.Column="9" Grid.Row="6" Grid.ColumnSpan="3" Grid.RowSpan="2" Cursor="Hand" MouseLeftButtonDown="Reports">
+                <TextBlock Style="{StaticResource LM_Text}" Text="کزارشات" Margin="105,30,10,0"/>
+                <Image Source="/Image/report.png" Margin="15,30,0,0" Height="50" />
+            </WrapPanel>
+            <!--Products Managment
+            <WrapPanel Grid.Column="9" Grid.Row="7" Grid.ColumnSpan="3" Grid.RowSpan="1" Cursor="Hand" MouseLeftButtonDown="Shoppings">
+                <TextBlock Style="{StaticResource LM_Text}" Text="سفارش خرید" Margin="50,10,0,0"/>
+                <Image Source="/Image/shopping-cart.png" Margin="20,10,0,0" Height="60" />
+            </WrapPanel>-->
+            <!--Reminders Managment-->
+            <WrapPanel Grid.Column="9" Grid.Row="7" Grid.ColumnSpan="3" Grid.RowSpan="2" Cursor="Hand" MouseLeftButtonDown="Reminders">
+                <TextBlock Style="{StaticResource LM_Text}" Text="یادآور ها" Margin="95,30,10,0"/>
+                <Image Source="/Image/reminder.png" Margin="15,30,0,0" Height="55" />
+            </WrapPanel>
+            <!--Messages Managment-->
+            <WrapPanel Grid.Column="9" Grid.Row="8" Grid.ColumnSpan="3" Grid.RowSpan="2" Cursor="Hand" MouseLeftButtonDown="Messages">
+                <TextBlock Style="{StaticResource LM_Text}" Text="پنل پیامکی" Margin="85,30,10,0"/>
+                <Image Source="/Image/email.png" Margin="5,30,0,0" Height="50" />
+            </WrapPanel>
+            <!--Setting Managment-->
+            <WrapPanel Grid.Column="9" Grid.Row="9" Grid.ColumnSpan="3" Grid.RowSpan="2" Cursor="Hand" MouseLeftButtonDown="Settings">
+                <TextBlock Style="{StaticResource LM_Text}" Text="تنظیمات" Margin="85,40,20,0"  HorizontalAlignment="Right" />
+                <Image Source="/Image/settings.png" Margin="15,35,0,0" Height="50" />
+            </WrapPanel>
+        </Grid>
+    </Border>
+
+</Window>

@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="DoctorOffice.RemindersXML_UC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DoctorOffice"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="560">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="Reminder_Title" Grid.Column="2" Foreground="#FFF5F8"  Text="عنوان یادآور"  FlowDirection="RightToLeft" FontFamily="IRANSansXFaNum" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="20,10,30,0" />
+        <TextBlock x:Name="Reminder_info" Grid.Column="1" Foreground="#FFF5F8"  Text="جزئیات یادآور" FlowDirection="RightToLeft" FontFamily="IRANSansXFaNum" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,10,0,0"/>
+        <Image Source="/Image/reminder.png" Margin="25,10,10,0"/>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,14 @@
+D:\C#\DoctorOffice\BLL\bin\Debug\BLL.dll
+D:\C#\DoctorOffice\BLL\bin\Debug\BLL.pdb
+D:\C#\DoctorOffice\BLL\bin\Debug\BE.dll
+D:\C#\DoctorOffice\BLL\bin\Debug\DAL.dll
+D:\C#\DoctorOffice\BLL\bin\Debug\EntityFramework.dll
+D:\C#\DoctorOffice\BLL\bin\Debug\BE.pdb
+D:\C#\DoctorOffice\BLL\bin\Debug\DAL.pdb
+D:\C#\DoctorOffice\BLL\bin\Debug\DAL.dll.config
+D:\C#\DoctorOffice\BLL\bin\Debug\EntityFramework.xml
+D:\C#\DoctorOffice\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\C#\DoctorOffice\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\C#\DoctorOffice\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\C#\DoctorOffice\BLL\obj\Debug\BLL.dll
+D:\C#\DoctorOffice\BLL\obj\Debug\BLL.pdb

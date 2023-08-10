@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{085EA436-D3CD-45F3-84EE-8D974A474CBE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DoctorOffice</RootNamespace>
+    <AssemblyName>DoctorOffice</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Charts, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FoxLearn.License">
+      <HintPath>..\License_Key\FoxLearn.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2022.1.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Stimulsoft Designer 2022.1.1\Designers\.NET\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win, Version=2022.1.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Stimulsoft Designer 2022.1.1\Designers\.NET\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debt_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Debt_UC.Designer.cs">
+      <DependentUpon>Debt_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorHome.Designer.cs">
+      <DependentUpon>DoctorHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorsForm_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoctorsForm_UC.Designer.cs">
+      <DependentUpon>DoctorsForm_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_PatientsList_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="D_PatientsList_UC.Designer.cs">
+      <DependentUpon>D_PatientsList_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_PersonalInfo_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="D_PersonalInfo_UC.Designer.cs">
+      <DependentUpon>D_PersonalInfo_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_PersonalPage_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="D_PersonalPage_UC.Designer.cs">
+      <DependentUpon>D_PersonalPage_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vacation_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vacation_UC.Designer.cs">
+      <DependentUpon>Vacation_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_WorkDays_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="D_WorkDays_UC.Designer.cs">
+      <DependentUpon>D_WorkDays_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinantialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinantialForm.Designer.cs">
+      <DependentUpon>FinantialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login_UC.Designer.cs">
+      <DependentUpon>Login_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientForm.Designer.cs">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientForm_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PatientForm_UC.Designer.cs">
+      <DependentUpon>PatientForm_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientTurn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientTurn.Designer.cs">
+      <DependentUpon>PatientTurn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientTurnXML_UC.xaml.cs">
+      <DependentUpon>PatientTurnXML_UC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterAdmin_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegisterAdmin_UC.Designer.cs">
+      <DependentUpon>RegisterAdmin_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReminderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReminderForm.Designer.cs">
+      <DependentUpon>ReminderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemindersXML_UC.xaml.cs">
+      <DependentUpon>RemindersXML_UC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCharts_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportCharts_UC.Designer.cs">
+      <DependentUpon>ReportCharts_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportLists_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportLists_UC.Designer.cs">
+      <DependentUpon>ReportLists_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsForm.Designer.cs">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Deposits.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Report_Deposits.Designer.cs">
+      <DependentUpon>Report_Deposits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Receive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Report_Receive.Designer.cs">
+      <DependentUpon>Report_Receive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecretaryForm_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SecretaryForm_UC.Designer.cs">
+      <DependentUpon>SecretaryForm_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecretaryHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecretaryHome.Designer.cs">
+      <DependentUpon>SecretaryHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S_PersonalInfo_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="S_PersonalInfo_UC.Designer.cs">
+      <DependentUpon>S_PersonalInfo_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tests_UC.Designer.cs">
+      <DependentUpon>Tests_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UploadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UploadForm.Designer.cs">
+      <DependentUpon>UploadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserGroup2_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserGroup2_UC.Designer.cs">
+      <DependentUpon>UserGroup2_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserGroup1_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserGroup1_UC.Designer.cs">
+      <DependentUpon>UserGroup1_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisitsHistory_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisitsHistory_UC.Designer.cs">
+      <DependentUpon>VisitsHistory_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visits_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visits_UC.Designer.cs">
+      <DependentUpon>Visits_UC.cs</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MainWindowClock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PatientTurnXML_UC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RemindersXML_UC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainWindowClock.xaml.cs">
+      <DependentUpon>MainWindowClock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSG.cs" />
+    <Compile Include="MsgBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgBoxForm.Designer.cs">
+      <DependentUpon>MsgBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientHome.Designer.cs">
+      <DependentUpon>PatientHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debt_UC.resx">
+      <DependentUpon>Debt_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorHome.resx">
+      <DependentUpon>DoctorHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorsForm_UC.resx">
+      <DependentUpon>DoctorsForm_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_PatientsList_UC.resx">
+      <DependentUpon>D_PatientsList_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_PersonalInfo_UC.resx">
+      <DependentUpon>D_PersonalInfo_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_PersonalPage_UC.resx">
+      <DependentUpon>D_PersonalPage_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vacation_UC.resx">
+      <DependentUpon>Vacation_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_WorkDays_UC.resx">
+      <DependentUpon>D_WorkDays_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinantialForm.resx">
+      <DependentUpon>FinantialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_UC.resx">
+      <DependentUpon>Login_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgBoxForm.resx">
+      <DependentUpon>MsgBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientForm.resx">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientForm_UC.resx">
+      <DependentUpon>PatientForm_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientHome.resx">
+      <DependentUpon>PatientHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientTurn.resx">
+      <DependentUpon>PatientTurn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterAdmin_UC.resx">
+      <DependentUpon>RegisterAdmin_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReminderForm.resx">
+      <DependentUpon>ReminderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCharts_UC.resx">
+      <DependentUpon>ReportCharts_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportLists_UC.resx">
+      <DependentUpon>ReportLists_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsForm.resx">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Deposits.resx">
+      <DependentUpon>Report_Deposits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Receive.resx">
+      <DependentUpon>Report_Receive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecretaryForm_UC.resx">
+      <DependentUpon>SecretaryForm_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecretaryHome.resx">
+      <DependentUpon>SecretaryHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S_PersonalInfo_UC.resx">
+      <DependentUpon>S_PersonalInfo_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests_UC.resx">
+      <DependentUpon>Tests_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UploadForm.resx">
+      <DependentUpon>UploadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserGroup2_UC.resx">
+      <DependentUpon>UserGroup2_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserGroup1_UC.resx">
+      <DependentUpon>UserGroup1_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisitsHistory_UC.resx">
+      <DependentUpon>VisitsHistory_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visits_UC.resx">
+      <DependentUpon>Visits_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{485f717f-502c-4924-b63a-c90685c10a2d}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{676bc999-f1a9-45f0-ac5b-2a4e4a59a0c1}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\healthcare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\alarm.png" />
+    <Resource Include="Image\folder.png" />
+    <Resource Include="Image\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\user_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\doctor-visit.png" />
+    <Resource Include="Image\financial.png" />
+    <Resource Include="Image\patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\email.png" />
+    <Resource Include="Image\reminder.png" />
+    <Resource Include="Image\report.png" />
+    <Resource Include="Image\settings.png" />
+    <Resource Include="Image\shopping-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Done.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\patients.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
